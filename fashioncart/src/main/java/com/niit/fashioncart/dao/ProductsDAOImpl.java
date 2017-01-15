@@ -15,12 +15,9 @@ import com.niit.fashioncart.model.Supplier;
 
 @Repository("productsDAO")
 @EnableTransactionManagement
-
 public class ProductsDAOImpl implements ProductsDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-
 	public ProductsDAOImpl(SessionFactory sessionFactory) {
 		
 		this.sessionFactory = sessionFactory;
@@ -40,7 +37,7 @@ public class ProductsDAOImpl implements ProductsDAO {
 	@Transactional
 	public Products getProducts(String id)
 	{
-		String hql="from Products where c_ID="+"'"+id+"'";
+		String hql="from Products where pid="+"'"+id+"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		List<Products> list=(List<Products>) query.list();
 		if(list!=null&& !list.isEmpty())
@@ -54,11 +51,11 @@ public class ProductsDAOImpl implements ProductsDAO {
 	@Transactional
 	public Products getByName(String name)
 	{
-		String hql="from Products where c_Name="+"'"+ name +"'";
+		String hql="from Products where pname="+"'"+ name +"'";
 		@SuppressWarnings("rawtypes")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
-		List<Products> list= query.list();
+		List<Products> list= (List<Products>)query.list();
 		if(list!=null && !list.isEmpty())
 		{
 			return list.get(0);

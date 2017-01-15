@@ -22,15 +22,14 @@ import com.niit.fashioncart.model.Category;
 import com.niit.fashioncart.model.Products;
 import com.niit.fashioncart.model.Supplier;
 
-
 @Controller 
 public class ProductsController
 {
 	@Autowired
 	ProductsDAO productsDAO;
 	
-	@Autowired
-	Products products;
+	//@Autowired
+	//Products products;
 	
 	@Autowired
 	CategoryDAO categoryDAO;
@@ -46,18 +45,19 @@ public class ProductsController
 	
 	private Path path;
 	
-	@RequestMapping("/products")
-	public ModelAndView getRegister(Model m)
-	{
-		m.addAttribute("products",new Products());
-		ModelAndView model = new ModelAndView("products");
-		return model;
-	}
+//	@RequestMapping("/products")
+//	public ModelAndView getRegister(Model m)
+//	{
+//		m.addAttribute("products",new Products());
+//		ModelAndView model = new ModelAndView("products");
+//		return model;
+//	}
 	
 	@RequestMapping(value="products/add", method=RequestMethod.POST)
 	public String addProducts(Model model, @Valid @ModelAttribute("products") Products products,HttpServletRequest request)
 	{
 		System.out.println(products);
+		System.out.println("hello...."+products.getCategory());
 		Category category=categoryDAO.getByName(products.getCategory().getCname());
 		System.out.println(category);
 		categoryDAO.addCategory(category);
@@ -122,7 +122,7 @@ public class ProductsController
 	public String editProducts(@PathVariable("pid") String id, Model model) {
 		System.out.println("editProducts");
 		model.addAttribute("products", this.productsDAO.getProducts(id));
-		model.addAttribute("productList", this.productsDAO.list());
+		model.addAttribute("productsList", this.productsDAO.list());
 		model.addAttribute("categoryList", this.categoryDAO.list());
 		model.addAttribute("supplierList", this.supplierDAO.list());
 		return "products";

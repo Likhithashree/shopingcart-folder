@@ -1,7 +1,6 @@
 package com.niit.fashioncart.dao;
 
 import java.util.List;
-
 import com.niit.fashioncart.model.Category;
 
 public interface CategoryDAO

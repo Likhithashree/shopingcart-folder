@@ -25,6 +25,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">FASHION WORLD</a>
+      
     </div>
     <ul class="nav navbar-nav">
       <li class="active">
@@ -39,7 +40,7 @@
       <li class="divider-vertical"></li>
        <c:if test="${pageContext.request.userPrincipal.name != null}">
       <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-      <li><a  href="<c:url value="/myCart" />"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a>${cartSize}</li>
+      <li><a  href="<c:url value="/myCart" />"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
       </c:if>
       <c:if test="${pageContext.request.userPrincipal.name  == 'admin'}">
        <li><a style="color:#F5F5DC" href="<c:url value="/admin" />">VIEW ALL</a></li>
@@ -83,11 +84,11 @@
       </div>
 
       <div class="item">
-        <img src="resources/images/suit3.jpg" alt="Flower" width="150" height="75">
+        <img src="resources/images/suit3.jpg" alt="Chania" width="150" height="75">
       </div>
 
       <div class="item">
-        <img src="resources/images/suit4.jpg" alt="Flower" width="200" height="200">
+        <img src="resources/images/suit4.jpg" alt="Chania" width="200" height="200">
       </div>
     </div>
 

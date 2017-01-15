@@ -11,11 +11,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 <div class="container">
   <h2>Login Form</h2>
    <div style="color:#000000;margin:40px 0px 0px 100px">
-    <a style="color:#000000;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
    </div>
    <div class="container" style="align:center; margin: 150px 0px 0px 150px">
    <div class="row">
@@ -59,6 +60,5 @@
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 </form>
 </div>
-
 </body>
 </html>

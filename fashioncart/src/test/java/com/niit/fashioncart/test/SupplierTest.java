@@ -14,12 +14,14 @@ public static void main(String[] args) {
 		SupplierDAO supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 		Supplier supplier =(Supplier) context.getBean("supplier");
 		
-		supplier.setSid("1011");
-		supplier.setScname("Sneha");
-		supplier.setSphone("9844786125");
-		supplier.setSaddress("jaynagar");
+		//supplier.setSid("1011");
+		//supplier.setScname("Sneha");
+		//supplier.setSphone("9844786125");
+		//supplier.setSaddress("jaynagar");
 		
-		supplierDAO.addSupplier(supplier);
+		//supplierDAO.addSupplier(supplier);
+		
+		System.out.println(supplierDAO.getByName("Sneha"));
 		
 	
 }

@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
-
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -31,11 +30,10 @@ public class Products
 	
 	@ManyToOne
 	@JoinColumn(name="supplier_id",nullable=false,updatable=false,insertable=false)
-	private Supplier supplier;
-	
-	
+	private Supplier supplier;	
 	
 	public Category getCategory() {
+		System.out.println(category+"products.java");
 		return category;
 	}
 	public void setCategory(Category category) {
@@ -82,9 +80,7 @@ public class Products
 	}
 	public void setPprice(int pprice) {
 		this.pprice = pprice;
-	}
-	
-	
+	}	
 	
 	public MultipartFile getImage()
 	{
@@ -93,6 +89,5 @@ public class Products
 	
 	public void setImage(MultipartFile image){
 	this.image = image;
-}
-	
+}	
 }

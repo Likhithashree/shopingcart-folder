@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.niit.fashioncart.dao.UserDAO;
 import com.niit.fashioncart.model.User;
-
 
 @Controller
 public class HomeController {
@@ -37,7 +35,7 @@ public class HomeController {
 	@RequestMapping(value="register/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("user")User user)
 	{
-		user.setRole("role_user");
+		user.setRole("ROLE_USER");
 		userDAO.addUser(user);
 		return "redirect:/";
 	}	
