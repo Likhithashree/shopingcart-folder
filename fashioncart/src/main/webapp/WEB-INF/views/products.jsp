@@ -91,6 +91,7 @@
 				<th style="color:black" width="125" align="center">PRODUCTS NAME</th>
 				<th style="color:black" width="190" align="center">PRODUCTS DESCRIPTION</th>
 				<th style="color:black" width="190" align="center">PRODUCTS PRICE</th>
+				<th style="color:black" width="190" align="center">IMAGE</th>
 				<th style="color:black" width="100" align="center">EDIT</th>
 				<th style="color:black" width="100" align="center">DELETE</th>
 			</tr>
@@ -100,6 +101,8 @@
 					<td  style="color:#000000;font-size:120%" align="center">${products.pname}</td>
 					<td style="color:#000000;font-size:120%" align="center">${products.pdescription}</td>
 					<td style="color:#000000;font-size:120%" align="center">${products.pprice}</td>
+				<td style="color:#000000;font-size:120%" align="center"><img src="<c:url value="/resources/images/${products.pid}.jpg"/>" width="240" height="240"/></td>
+					
 					<td style="color:#000000;font-size:120%" align="center"><a href="<c:url value='products/edit/${products.pid}' />"><button type="button" class="btn btn-warning">Edit</button></a></td>
 					<td style="color:#000000;font-size:120%" align="center"><a href="<c:url value='products/remove/${products.pid}' />"><button type="button" class="btn btn-danger">Delete</button></a></td>
 				</tr>
