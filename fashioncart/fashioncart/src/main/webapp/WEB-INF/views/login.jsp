@@ -15,7 +15,14 @@
 <head>
 <style>
 body {
-    background-color: lightblue;
+  
+    background-image: url(resources/images/suit6.jpg);     
+   background-position:right bottom,left top; 
+    background-color:light blue;
+   background-size: 500px 600px;                     
+   background-repeat:   no-repeat;
+  
+
 }
 </style>
 </head>

@@ -7,7 +7,7 @@ http://www.springframework.org/schema/security/spring-security.xsd" xmlns:securi
 <security:intercept-url access="hasRole('ROLE_ADMIN')" pattern="/admin"/> 
 <security:intercept-url access="hasRole('ROLE_USER')" pattern="/user"/> 
 
-<security:intercept-url access="hasRole('ROLE_USER')" pattern="/cart/add/{p_id}"/>
+<security:intercept-url access="hasRole('ROLE_USER')" pattern="/cart/add/{pid}"/>
 <security:form-login login-processing-url="/j_spring_security_check" password-parameter="password" username-parameter="username" authentication-failure-url="/login?error" default-target-url="/" login-page="/login"/>
 
 <security:logout logout-url="/j_spring_security_logout" logout-success-url="/login?logout"/> 

@@ -1,3 +1,4 @@
+C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\controller\CartController.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\dao\CategoryDAO.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\dao\SupplierDAO.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\model\Category.java
@@ -15,5 +16,7 @@ C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\model\Pro
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\controller\HomeController.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\dao\ProductsDAOImpl.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\model\Cart.java
+C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\dao\CartDAO.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\controller\CategoryController.java
 C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\controller\SupplierController.java
+C:\Users\MRuser\Desktop\fashioncart\src\main\java\com\niit\fashioncart\dao\CartDAOImpl.java

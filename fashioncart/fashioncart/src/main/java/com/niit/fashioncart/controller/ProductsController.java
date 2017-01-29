@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -132,4 +134,19 @@ public class ProductsController
 		model.addAttribute("supplierList", this.supplierDAO.list());
 		return "products";
 	}	
+	@RequestMapping(value="products/get/{pid}")
+	public String getSelectedProduct(@PathVariable("pid") String id,Model model,RedirectAttributes redirectAttributes)
+	{
+	redirectAttributes.addFlashAttribute("selectedProducts",productsDAO.getProducts(id));
+	return "redirect:/backToHome";
+	}
+
+	@RequestMapping(value="/backToHome",method=RequestMethod.GET)
+	public String backToHome(@ModelAttribute("selectedProducts")
+	final Products selectedProducts,final Model model)
+	{
+	model.addAttribute("selectedProducts",selectedProducts);
+	model.addAttribute("categoryList",this.categoryDAO.list());
+	return "item";
+	}
 }

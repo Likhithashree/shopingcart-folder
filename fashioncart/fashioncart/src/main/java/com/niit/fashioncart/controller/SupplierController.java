@@ -14,6 +14,7 @@ import com.niit.fashioncart.dao.SupplierDAO;
 import com.niit.fashioncart.dao.UserDAO;
 import com.niit.fashioncart.model.Supplier;
 import com.niit.fashioncart.model.User;
+import com.niit.fashioncart.util.Util;
 
 
 @Controller 
@@ -36,6 +37,11 @@ public class SupplierController
 	@RequestMapping(value="supplier/add", method=RequestMethod.POST)
 	public String addSupplier(Model model, @ModelAttribute("supplier")Supplier supplier)
 	{
+		Util util = new Util();
+		String s_id = util.commaProblem(supplier.getSid());
+		supplier.setSid(s_id);
+		
+		
 		supplierDAO.addSupplier(supplier);
 		return "redirect:/supplier";
 	}	

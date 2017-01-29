@@ -14,7 +14,7 @@
 <head>
 <style>
 body {
-    background-color: cyan;
+    background-color:lightcyan;
 }
 </style>
 </head>

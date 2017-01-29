@@ -13,6 +13,7 @@ import com.niit.fashioncart.dao.CategoryDAO;
 import com.niit.fashioncart.dao.UserDAO;
 import com.niit.fashioncart.model.Category;
 import com.niit.fashioncart.model.User;
+import com.niit.fashioncart.util.Util;
 
 
 @Controller 
@@ -24,6 +25,7 @@ public class CategoryController
 	@Autowired
 	Category category;	
 	
+	
 //	@RequestMapping("/category")
 //	public ModelAndView getCategory(Model m)
 //	{
@@ -34,6 +36,11 @@ public class CategoryController
 	@RequestMapping(value="category/add", method=RequestMethod.POST)
 	public String addCategory(Model model, @ModelAttribute("category")Category category)
 	{
+		Util util = new Util();
+		String c_id = util.commaProblem(category.getCid());
+		category.setCid(c_id);
+		
+		
 		categoryDAO.addCategory(category);
 		return "redirect:/category";
 	}	

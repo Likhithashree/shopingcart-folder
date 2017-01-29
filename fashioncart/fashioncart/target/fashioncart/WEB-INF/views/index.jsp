@@ -30,6 +30,19 @@
     <ul class="nav navbar-nav">
       <li class="active">
       		<a href="#">Home</a></li>
+      		<c:forEach items="${categoryList}" var="category">
+      <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.cname}>${category.cname}<span class="caret"></span> </a>
+      <ul class="dropdown-menu">
+      <c:forEach items="${category.products}" var="products">
+      <li><a style="color:#000000" href="<c:url value='products/get/${products.pid}'/>"> ${products.pname} </a>
+    
+     </c:forEach>
+     <li><a style="color:#F5F5DC" href="#"></a></li>
+     </ul>
+      </li>       
+      </c:forEach>
+      
           	<li><a href="">About Us</a></li>
        		<li><a href="admin">Admin</a></li>
         </ul>

@@ -2,13 +2,16 @@ com\niit\fashioncart\dao\CategoryDAO.class
 com\niit\fashioncart\controller\ProductsController.class
 com\niit\fashioncart\model\User.class
 com\niit\fashioncart\config\ApplicationContext.class
+com\niit\fashioncart\controller\CartController.class
 com\niit\fashioncart\dao\SupplierDAOImpl.class
 com\niit\fashioncart\dao\ProductsDAO.class
 com\niit\fashioncart\dao\ProductsDAOImpl.class
 com\niit\fashioncart\dao\UserDAO.class
+com\niit\fashioncart\dao\CartDAOImpl.class
 com\niit\fashioncart\model\Category.class
 com\niit\fashioncart\util\Util.class
 com\niit\fashioncart\dao\SupplierDAO.class
+com\niit\fashioncart\dao\CartDAO.class
 com\niit\fashioncart\dao\CategoryDAOImpl.class
 com\niit\fashioncart\controller\SupplierController.class
 com\niit\fashioncart\dao\UserDAOImpl.class
