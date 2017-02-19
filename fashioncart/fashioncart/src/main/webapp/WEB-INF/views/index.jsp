@@ -44,7 +44,7 @@
       </c:forEach>
       
           	<li><a href="">About Us</a></li>
-       		<li><a href="admin">Admin</a></li>
+<!--        		<li><a href="admin">Admin</a></li> -->
         </ul>
       </li>
      </ul>

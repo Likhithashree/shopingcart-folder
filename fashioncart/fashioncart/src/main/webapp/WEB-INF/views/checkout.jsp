@@ -20,8 +20,9 @@
 </head>
 <style>
 body{
-background-image: url(resources/images/cart9.jpg);
-background-size:     cover;                      
+background-image: url(resources/images/13.jpg);
+background-position: right top; 
+ background-size: 1400px 1000px;                      
     background-repeat:   no-repeat;
 }
 th{

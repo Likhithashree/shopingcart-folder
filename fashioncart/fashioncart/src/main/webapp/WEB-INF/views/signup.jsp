@@ -14,7 +14,10 @@
 <head>
 <style>
 body {
-    background-color:lightcyan;
+    background-image: url(resources/images/11.jpg);
+/*     background-color:lightcyan; */
+    background-size: 1300px 600px;
+    background-repeat:   no-repeat;
 }
 </style>
 </head>
