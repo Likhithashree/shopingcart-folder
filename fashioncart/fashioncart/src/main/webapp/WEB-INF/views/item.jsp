@@ -66,6 +66,20 @@ background-repeat:no-repeat;
 					</table>
 					<hr>
 					</div>
+					<head>
+<style>
+body {
+  
+/*     background-image: url(resources/images/suit6.jpg);      */
+/*    background-position:right bottom,left top;    */
+/*    background-size: 500px 600px;    */
+    background-color:palegoldenrod;                   
+/*    background-repeat:   no-repeat; */
+  
+
+}
+</style>
+</head>
 					<div class="panel-footer">
 					<div class="row text-center">
 						

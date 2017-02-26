@@ -12,6 +12,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Products</title>
 </head>
+
+<style>
+body {
+    background-image: url(resources/images/15.jpg);
+/*     background-color:lightcyan; */
+     background-size: 1400px 1900px;
+     background-repeat:   no-repeat;
+}
+</style>
+
 <body>
 <div class="container">
   <h2><center>ADD PRODUCTS</center></h2>
@@ -85,7 +95,7 @@
 <h3><center>PRODUCTS LIST</center></h3>
 <br>
 <c:if test="${!empty productsList}">
-	<table  class="table" align="center" bordercolor="#800080" BORDER=10>
+	<table  class="table" align="center" bordercolor="#0000FF" BORDER=3>
 			<tr bgcolor="#F0F8FF">
 				<th style="color:black" width="125" bgcolor="#F0F8FF" align="center">PRODUCTS ID</th>
 				<th style="color:black" width="125" align="center">PRODUCTS NAME</th>
@@ -95,6 +105,24 @@
 				<th style="color:black" width="100" align="center">EDIT</th>
 				<th style="color:black" width="100" align="center">DELETE</th>
 			</tr>
+			<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #20B2AA;
+    color: blue;
+}
+</style>
 					<c:forEach items="${productsList}" var="products">
 				<tr bgcolor="#FFFFFF">
 					<td  style="color:#000000;font-size:120%" align="center">${products.pid}</td>

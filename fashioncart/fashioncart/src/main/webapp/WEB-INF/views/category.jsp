@@ -13,6 +13,18 @@
 <title>Category</title>
 </head>
 <body>
+
+<style>
+body {
+    background-image: url(resources/images/14.jpg);
+/*     background-color:lightcyan; */
+    background-size: 1400px 700px;
+    background-repeat:   no-repeat;
+}
+</style>
+</head>
+<body>
+
 <div class="container">
   <h2><center>ADD CATEGORY</center></h2>
 <c:url var="addAction"  value="/category/add"></c:url>
@@ -66,7 +78,7 @@
 <h3><center>CATEGORY LIST</center></h3>
 <br>
 <c:if test="${!empty categoryList}">
-	<table  class="table" align="center" bordercolor="#800080" BORDER=10>
+	<table  class="table" align="center" bordercolor="#0000FF" BORDER=3>
 			<tr bgcolor="#F0F8FF">
 				<th style="color:black" width="125" bgcolor="#F0F8FF" align="center">CATEGORY ID</th>
 				<th style="color:black" width="125" align="center">CATEGORY NAME</th>
@@ -74,6 +86,26 @@
 				<th style="color:black" width="100" align="center">EDIT</th>
 				<th style="color:black" width="100" align="center">DELETE</th>
 			</tr>
+			<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #20B2AA;
+    color: blue;
+}
+</style>
+
+  
 					<c:forEach items="${categoryList}" var="category">
 				<tr bgcolor="#FFFFFF">
 					<td  style="color:#000000;font-size:120%" align="center">${category.cid}</td>

@@ -13,6 +13,17 @@
 <title>Supplier</title>
 </head>
 <body>
+<style>
+body {
+    background-image: url(resources/images/14.jpg);
+/*     background-color:lightcyan; */
+    background-size: 1400px 700px;
+    background-repeat:   no-repeat;
+}
+</style>
+</head>
+<body>
+
 <div class="container">
  <h2><center>ADD SUPPLIER</center></h2>
 <c:url var="addAction"  value="/supplier/add"></c:url>
@@ -72,7 +83,7 @@
 <h3><center>SUPPLIER LIST</center></h3>
 <br>
 <c:if test="${!empty supplierList}">
-	<table  class="table" align="center" bordercolor="#800080" BORDER=10>
+	<table  class="table" align="center" bordercolor="#0000FF" BORDER=3>
 			<tr bgcolor="#F0F8FF">
 				<th style="color:black" width="125" bgcolor="#F0F8FF" align="center">SUPPLIER ID</th>
 				<th style="color:black" width="125" align="center">SUPPLIER NAME</th>
@@ -90,6 +101,28 @@
 					<td style="color:black;font-size:120%" align="center"><a href="<c:url value='supplier/edit/${supplier.sid}' />"><button type="button" class="btn btn-warning">Edit</button></a></td>
 					<td style="color:black;font-size:120%" align="center"><a href="<c:url value='supplier/remove/${supplier.sid}' />"><button type="button" class="btn btn-danger">Delete</button></a></td>
 				</tr>
+				
+				<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #20B2AA;
+    color: blue;
+}
+</style>
+
+				
+				
 			</c:forEach>
 		</table>
 	</c:if>

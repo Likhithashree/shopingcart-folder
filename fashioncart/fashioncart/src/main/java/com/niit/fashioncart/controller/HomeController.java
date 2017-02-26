@@ -45,6 +45,14 @@ public class HomeController {
 		model.addAttribute("categoryList",this.categoryDAO.list());
 		return "index";
 	}
+	
+	@RequestMapping("/contactus")
+	public String getcontactus()
+	{
+		
+		//m.addAttribute("categoryList",this.categoryDAO.list());
+		return "contactus";
+	}
 	@RequestMapping("/register")
 	public ModelAndView getRegister(Model m)
 	{
